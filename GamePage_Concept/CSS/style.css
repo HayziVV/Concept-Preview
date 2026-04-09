@@ -26,7 +26,7 @@ nav a {
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 1.5rem;
     transition: 0.3s;
 }
 
@@ -74,14 +74,15 @@ header {
 .content-showcase {
     display: flex;
     gap: 40px;
-
     align-items: center;
-
     margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .content-image-box {
-    flex: 0 0 300px;
+    flex: 0 0 auto;
+    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -119,7 +120,7 @@ header {
 
 .char-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     margin: 20px 0;
 
