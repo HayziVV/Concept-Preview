@@ -21,8 +21,25 @@
     <main>
         <section id="home" class="content-section">
             <div class="container">
-                <h2>Bem-vindo ao West Braw</h2>
-                <p>Conteúdo da página home...</p>
+                <div class="section-header">
+                    <h2>Bem-vindo ao <span class="highlight">Brawl Protocol</span></h2>
+                </div>
+                <div class="content-image-box">
+                    <img src="images/BrawlProtocol_Title.png" alt="Pôster do Jogo">
+                </div>
+
+                <div class="content-showcase">
+
+
+                    <div class="content-info">
+                        <h3>A Nova Fronteira Digital Te Espera</h3>
+                        <p>Prepare-se para explorar desertos áridos e cidades cibernéticas onde a lei é feita por quem
+                            saca mais rápido. No Brawl Protocol, a estratégia e a força bruta andam lado a lado.</p>
+                        <p>Navegue pelo menu acima para conhecer os personagens, a história desse mundo e ver uma prévia
+                            da gameplay</p>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -35,8 +52,45 @@
 
         <section id="characters" class="content-section hidden">
             <div class="container">
-                <h2>Personagens</h2>
-                <p>Mercenarios, Inventores, Ciborgues...</p>
+
+                <div class="section-header">
+                    <h2>Roster de <span class="highlight">Personagens</span></h2>
+                    <p>Selecione um Personagem.</p>
+                    <div class="character-selector">
+                        <button class="char-btn active" data-id="0">Mercenario</button>
+                        <button class="char-btn" data-id="1">Inventor</button>
+                        <button class="char-btn" data-id="2">Bounty Hunter</button>
+                    </div>
+                </div>
+
+                <div class="content-showcase">
+
+
+                    <div class="content-info">
+                        <h3 id="char-name">Mercenario</h3>
+
+                        <div class="char-stats">
+                            <p><strong>Vida:</strong> <span id="stat-vida">300</span></p>
+                            <p><strong>Energia:</strong> <span id="stat-energia">120</span></p>
+                            <p><strong>Força:</strong> <span id="stat-forca">30</span></p>
+                            <p><strong>Agilidade:</strong> <span id="stat-agilidade">20</span></p>
+                            <p><strong>Inteligência:</strong> <span id="stat-inteligencia">20</span></p>
+                            <p><strong>Precisão:</strong> <span id="stat-precisao">30</span></p>
+                            <p><strong>Armadura:</strong> <span id="stat-armadura">20</span></p>
+                            <p><strong>Resistência:</strong> <span id="stat-resist">20</span></p>
+                        </div>
+
+                        <p class="char-lore">Veterano de inúmeras batalhas corporativas, o Mercenario é um especialista
+                            em combate. Equipado para qualquer situação, ele combina força bruta com táticas de combate
+                            versáteis para derrotar seus inimigos.</p>
+                    </div>
+
+                    <div class="content-image-box">
+                        <img src="images/mercenary.png" alt="Mercenario" class="uniform-image" id="char-img">
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
