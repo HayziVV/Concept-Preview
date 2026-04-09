@@ -1,46 +1,18 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.content-section');
-const characters = [
-    {
-        nome: "Mercenario",
-        Vida: 300,
-        Energia: 120,
-        Força: 30,
-        Agilidade: 20,
-        Inteligência: 20,
-        Precisão: 30,
-        Armadura: 20,
-        Resistência: 20,
-        lore: "Veterano de inúmeras batalhas corporativas, o Mercenario é um especialista em combate. Equipado para qualquer situação, ele combina força bruta com táticas de combate versáteis para derrotar seus inimigos.",
-        imagem: "images/mercenary.png"
-    },
-    {
-        nome: "Inventor",
-        Vida: 200,
-        Energia: 220,
-        Força: 20,
-        Agilidade: 20,
-        Inteligência: 50,
-        Precisão: 10,
-        Armadura: 10,
-        Resistência: 30,
-        lore: "Uma mente brilhante em um mundo de força bruta. O Inventor usa sua inteligência superior e aparatos tecnológicos para controlar o campo de batalha, superando a força de seus inimigos com sua inteligencia.",
-        imagem: "images/inventor.png"
-    },
-    {
-        nome: "Caçador de Recompensas",
-        Vida: 250,
-        Energia: 170,
-        Força: 20,
-        Agilidade: 40,
-        Inteligência: 20,
-        Precisão: 20,
-        Armadura: 30,
-        Resistência: 10,
-        lore: "Ágil e letal, o Bounty Hunter vive para caçar. Ele rastreia seus alvos pelos desertos áridos, utilizando precisão e velocidade para garantir que o contrato seja sempre cumprido.",
-        imagem: "images/bounty_hunter.png"
-    },
-];
+
+function gerarBotoesPersonagens() {
+    const container = document.getElementById('botoes-container');
+    let htmlBotoes = '';
+    characters.forEach((heroi, index) => {
+        let classeAtiva = index === 0 ? 'char-btn active' : 'char-btn';
+        htmlBotoes += `<button class="${classeAtiva}" data-id="${index}">${heroi.nome}</button>`;
+    });
+
+    container.innerHTML = htmlBotoes;
+}
+
+gerarBotoesPersonagens();
 
 navLinks.forEach(link => {
     link.addEventListener('click', function (event) {
@@ -66,6 +38,7 @@ navLinks.forEach(link => {
 
 const botoes = document.querySelectorAll('.char-btn');
 
+
 botoes.forEach(botao => {
     botao.addEventListener('click', function () {
 
@@ -80,13 +53,34 @@ botoes.forEach(botao => {
         document.querySelector('.char-lore').innerText = heroi.lore;
         document.getElementById('char-img').src = heroi.imagem;
 
-        document.getElementById('stat-vida').innerText = heroi.Vida;
-        document.getElementById('stat-energia').innerText = heroi.Energia;
-        document.getElementById('stat-forca').innerText = heroi.Força;
-        document.getElementById('stat-agilidade').innerText = heroi.Agilidade;
-        document.getElementById('stat-inteligencia').innerText = heroi.Inteligência;
-        document.getElementById('stat-precisao').innerText = heroi.Precisão;
-        document.getElementById('stat-armadura').innerText = heroi.Armadura;
-        document.getElementById('stat-resist').innerText = heroi.Resistência;
+        document.getElementById('stat-vida').innerText = heroi.Life;
+        document.getElementById('stat-energia').innerText = heroi.Energy;
+        document.getElementById('stat-forca').innerText = heroi.Streght;
+        document.getElementById('stat-agilidade').innerText = heroi.Agility;
+        document.getElementById('stat-inteligencia').innerText = heroi.Inteligence;
+        document.getElementById('stat-precisao').innerText = heroi.Precision;
+        document.getElementById('stat-armadura').innerText = heroi.Armor;
+        document.getElementById('stat-resist').innerText = heroi.Resistance;
     });
 });
+
+function carregarLore() {
+    const loreContainer = document.getElementById('lore-container');
+
+    let htmlDaHistoria = `<h3>${gameLore.title}</h3>`;
+    gameLore.sections.forEach(secao => {
+        htmlDaHistoria += `
+            <div class="lore-section">
+                <h4 style="color: #ffaa00; margin-bottom: 5px;">${secao.subtitle}</h4>
+                <p style="color: #ccc; line-height: 1.6; margin-top: 0;">${secao.paragraph}</p>
+            </div>
+            <br>
+        `;
+    });
+
+    loreContainer.innerHTML = htmlDaHistoria;
+}
+
+carregarLore();
+
+document.querySelector('.char-btn[data-id="0"]').click();

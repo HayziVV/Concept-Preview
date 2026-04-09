@@ -39,26 +39,11 @@ nav a.active {
     color: #e08803;
 }
 
-.neon-line {
-    height: 2px;
-    background: #e08803;
-    box-shadow: 0 0 10px #e08803;
-}
-
 header {
     background-color: #121212;
     border-bottom: 2px solid #e08803;
     padding: 15px 20px;
     box-shadow: 0px 4px 15px rgba(255, 170, 0, 0.3);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2px;
-}
-
-header p {
-    font-size: 1.1rem;
 }
 
 .container {
@@ -76,20 +61,12 @@ header p {
 .section-header {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 1px dashed #ffaa00;
+    border-bottom: 1px solid #ffaa00;
     padding-bottom: 10px;
 }
 
 .highlight {
     color: #ffaa00;
-
-}
-
-
-.character-showcase {
-    display: flex;
-    gap: 40px;
-    align-items: center;
 
 }
 
@@ -106,7 +83,7 @@ header p {
     flex: 0 0 300px;
     display: flex;
     justify-content: center;
-   
+
 }
 
 .content-image-box img {
@@ -122,25 +99,10 @@ header p {
     flex: 1;
 }
 
-.character-image-box img {
-    width: 100%;
-    max-width: 300px;
-    border: 2px solid #ffaa00;
-    border-radius: 4px;
-    box-shadow: 0 0 15px rgba(255, 170, 0, 0.2);
-}
-
 .character-info h3 {
     font-size: 2.5rem;
     margin: 0 0 10px 0;
     color: #ffffff;
-}
-
-.char-role {
-    color: #ff00ff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 .char-stats p {
@@ -179,6 +141,35 @@ header p {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.char-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 120px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #000000;
+    color: #eee;
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.char-btn:hover {
+    background-color: #444;
+    border-color: #777;
+}
+
+.char-btn:active {
+    transform: translateY(1px);
+}
 
 .uniform-image {
     width: 300px;
@@ -200,6 +191,7 @@ header p {
     animation: fadeIn 0.4s ease-in-out;
 }
 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -215,9 +207,5 @@ header p {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-    }
-
-    .sidebar {
-        max-width: 100%;
     }
 }
