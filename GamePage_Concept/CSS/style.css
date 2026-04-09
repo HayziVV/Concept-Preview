@@ -17,7 +17,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     display: flex;
-    gap: 100px;
+    gap: 30px;
     padding: 5px 0;
 }
 
@@ -40,6 +40,8 @@ nav a.active {
 }
 
 header {
+    padding: 15px 5px;
+    text-align: center;
     background-color: #121212;
     border-bottom: 2px solid #e08803;
     padding: 15px 20px;
